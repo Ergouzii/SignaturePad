@@ -1,0 +1,26 @@
+{
+  "name": "signaturepad",
+  "version": "1.0.0",
+  "description": "This is a simple signature with 3 tabs: type field, file chooser and drawing pad.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ergouzii/SignaturePad.git"
+  },
+  "author": "Xiaohui Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ergouzii/SignaturePad/issues"
+  },
+  "homepage": "https://github.com/Ergouzii/SignaturePad#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "less": "^3.11.3"
+  }
+}

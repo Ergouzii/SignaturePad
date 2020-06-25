@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+  <body>
+    <h2>Create a Signature</h2>
+    <p>Use one of the following ways to create your signature:</p>
+
+    <div class="tab">
+      <button class="tabLinks" onclick="openTab(event, 'Type')">
+        Type
+      </button>
+      <button class="tabLinks" onclick="openTab(event, 'Upload')">
+        Upload
+      </button>
+      <button class="tabLinks" onclick="openTab(event, 'Draw')">
+        Draw
+      </button>
+    </div>
+
+    <div id="Type" class="tabContent">
+      <h3>Type</h3>
+      <p>Type here.</p>
+    </div>
+
+    <div id="Upload" class="tabContent">
+      <h3>Upload</h3>
+      <p>Upload here.</p>
+    </div>
+
+    <div id="Draw" class="tabContent">
+      <h3>Draw</h3>
+      <p>Draw here.</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

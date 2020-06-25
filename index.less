@@ -1,0 +1,42 @@
+@primaryColor: #BBDEFB;
+@secondaryColor: #B2DFDB;
+
+body {
+  font-family: Arial;
+  background-color: #fff;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: @primaryColor;
+
+  /* Style the buttons inside the tab */
+  button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 18px;
+  }
+
+  /* Change background color of buttons on hover */
+  button:hover {
+    background-color: @secondaryColor;
+  }
+
+  /* Create an active/current tablink class */
+  button.active {
+    background-color: @secondaryColor;
+  }
+}
+
+/* Style the tab content */
+.tabContent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
