@@ -38,6 +38,11 @@ body {
   border-top: none;
 }
 .container #signatureTyped {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  width: 300px;
   font-family: 'Indie Flower', cursive;
   font-size: 24px;
 }
