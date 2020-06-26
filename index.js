@@ -44,5 +44,15 @@ const uploadHandler = (input) => {
   }
 };
 
+/**
+ * Get the canvas element and use signature pad.
+ */
 const canvas = document.getElementById('drawPad');
 const signaturePad = new SignaturePad(canvas);
+
+/**
+ * Listen on clear button and clear the pad if button is clicked.
+ */
+document.getElementById('clearBut').addEventListener('click', () => {
+  signaturePad.clear();
+});
