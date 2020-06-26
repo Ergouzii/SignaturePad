@@ -3,7 +3,7 @@
  *
  * It Takes in evt (event) and a tabName (string).
  *
- * A tabName can be either 'Type', 'Upload', or 'Draw'
+ * A tabName can be either 'Type', 'Upload', or 'Draw'.
  */
 const openTab = (evt, tabName) => {
   const tabContent = document.getElementsByClassName('tabContent');
@@ -25,3 +25,24 @@ const openTab = (evt, tabName) => {
   document.getElementById(tabName).style.display = 'block';
   evt.currentTarget.className += ' active';
 };
+
+/**
+ * Show the image of signature after it is uploaded.
+ */
+const uploadHandler = (input) => {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    const signatureImg = document.getElementById('signatureImg');
+
+    reader.onload = (e) => {
+      signatureImg.src = e.target.result;
+      signatureImg.width = 400;
+      signatureImg.height = 200;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+};
+
+const canvas = document.getElementById('drawPad');
+const signaturePad = new SignaturePad(canvas);

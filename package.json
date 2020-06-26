@@ -16,7 +16,9 @@
     "url": "https://github.com/Ergouzii/SignaturePad/issues"
   },
   "homepage": "https://github.com/Ergouzii/SignaturePad#readme",
-  "dependencies": {},
+  "dependencies": {
+    "signature_pad": "^3.0.0-beta.3"
+  },
   "devDependencies": {
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",

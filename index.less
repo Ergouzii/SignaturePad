@@ -1,9 +1,13 @@
-@primaryColor: #BBDEFB;
-@secondaryColor: #B2DFDB;
+@primaryColor: #bbdefb;
+@secondaryColor: #b2dfdb;
+@handwrittenFont: 'Indie Flower';
+@smallFontSize: 14px;
+@mediumFontSize: 18px;
+@largeFontSize: 24px;
 
 body {
   font-family: Arial;
-  background-color: #fff;
+  font-size: @smallFontSize;
 }
 
 /* Style the tab */
@@ -17,19 +21,19 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 15px;
     transition: 0.3s;
-    font-size: 18px;
-  }
+    font-size: @smallFontSize;
 
-  /* Change background color of buttons on hover */
-  button:hover {
-    background-color: @secondaryColor;
-  }
+    /* Change background color of buttons on hover */
+    &:hover {
+      background-color: @secondaryColor;
+    }
 
-  /* Create an active/current tablink class */
-  button.active {
-    background-color: @secondaryColor;
+    /* Active/current tab link class */
+    &.active {
+      background-color: @secondaryColor;
+    }
   }
 }
 
@@ -39,4 +43,10 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+/* Style type field */
+#signatureTyped {
+  font-family: @handwrittenFont, cursive;
+  font-size: @largeFontSize;
 }

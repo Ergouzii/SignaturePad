@@ -3,6 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="index.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
   </head>
   <body>
     <h2>Create a Signature</h2>
@@ -21,20 +26,28 @@
     </div>
 
     <div id="Type" class="tabContent">
-      <h3>Type</h3>
-      <p>Type here.</p>
+      <label for="signatureTyped">Type your signature:</label>
+      <input type="text" id="signatureTyped" name="signatureTyped" required />
     </div>
 
     <div id="Upload" class="tabContent">
-      <h3>Upload</h3>
-      <p>Upload here.</p>
+      <label for="signatureUploaded"
+        >Upload an image as signature (png/jpeg):</label
+      >
+      <input
+        type="file"
+        id="signatureUploaded"
+        name="signatureUploaded"
+        accept="image/png, image/jpeg"
+        onchange="uploadHandler(this);"
+      />
+      <img id="signatureImg" src="#" alt="Signature" />
     </div>
 
     <div id="Draw" class="tabContent">
-      <h3>Draw</h3>
-      <p>Draw here.</p>
+      <canvas id="drawPad"></canvas>
     </div>
 
-    <script src="index.js"></script>
+    <script src="./index.js" type="text/javascript"></script>
   </body>
 </html>
