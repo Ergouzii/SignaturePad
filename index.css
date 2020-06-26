@@ -1,39 +1,49 @@
 body {
   font-family: Arial;
-  font-size: 14px;
+  font-size: 16px;
+  height: 100vh;
 }
-/* Style the tab */
-.tab {
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  min-height: 400px;
+  /* Style the tab */
+  /* Style the tab content */
+  /* Style type field */
+}
+.container .tab {
   overflow: hidden;
-  background-color: #bbdefb;
   /* Style the buttons inside the tab */
 }
-.tab button {
+.container .tab button {
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 15px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   /* Change background color of buttons on hover */
   /* Active/current tab link class */
 }
-.tab button:hover {
+.container .tab button:hover {
   background-color: #b2dfdb;
 }
-.tab button.active {
+.container .tab button.active {
   background-color: #b2dfdb;
 }
-/* Style the tab content */
-.tabContent {
+.container .tabContent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  padding: 20px;
   border-top: none;
 }
-/* Style type field */
-#signatureTyped {
+.container #signatureTyped {
   font-family: 'Indie Flower', cursive;
   font-size: 24px;
+}
+.container #signatureImg {
+  visibility: hidden;
+}
+.container #drawPad {
+  border-style: ridge;
 }

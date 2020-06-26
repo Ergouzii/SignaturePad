@@ -22,45 +22,54 @@
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
   </head>
   <body>
-    <h2>Create a Signature</h2>
-    <p>Use one of the following ways to create your signature:</p>
+    <div class="container card">
+      <h2 class="card-title text-primary">Create a Signature</h2>
+      <p class="card-text">
+        Use one of the following ways to create your signature:
+      </p>
 
-    <div class="tab">
-      <button class="tabLinks" onclick="openTab(event, 'Type')">
-        Type
-      </button>
-      <button class="tabLinks" onclick="openTab(event, 'Upload')">
-        Upload
-      </button>
-      <button class="tabLinks" onclick="openTab(event, 'Draw')">
-        Draw
-      </button>
+      <div class="tab row">
+        <button class="tabLinks col" onclick="openTab(event, 'Type')">
+          Type
+        </button>
+        <button class="tabLinks col" onclick="openTab(event, 'Upload')">
+          Upload
+        </button>
+        <button class="tabLinks col" onclick="openTab(event, 'Draw')">
+          Draw
+        </button>
+      </div>
+
+      <div id="Type" class="tabContent card-body">
+        <label for="signatureTyped">Type your signature:</label>
+        <input type="text" id="signatureTyped" name="signatureTyped" required />
+      </div>
+
+      <div id="Upload" class="tabContent">
+        <label for="signatureUploaded"
+          >Upload an image as signature (png/jpeg):</label
+        >
+        <input
+          type="file"
+          id="signatureUploaded"
+          name="signatureUploaded"
+          accept="image/png, image/jpeg"
+          onchange="uploadHandler(this);"
+        />
+        <img
+          id="signatureImg"
+          class="img-fluid rounded"
+          src="#"
+          alt="Signature"
+        />
+      </div>
+
+      <div id="Draw" class="tabContent">
+        <canvas id="drawPad"></canvas>
+        <button id="clearBut">Clear</button>
+      </div>
+
+      <script src="./index.js" type="text/javascript"></script>
     </div>
-
-    <div id="Type" class="tabContent">
-      <label for="signatureTyped">Type your signature:</label>
-      <input type="text" id="signatureTyped" name="signatureTyped" required />
-    </div>
-
-    <div id="Upload" class="tabContent">
-      <label for="signatureUploaded"
-        >Upload an image as signature (png/jpeg):</label
-      >
-      <input
-        type="file"
-        id="signatureUploaded"
-        name="signatureUploaded"
-        accept="image/png, image/jpeg"
-        onchange="uploadHandler(this);"
-      />
-      <img id="signatureImg" src="#" alt="Signature" />
-    </div>
-
-    <div id="Draw" class="tabContent">
-      <canvas id="drawPad"></canvas>
-      <button id="clearBut">Clear</button>
-    </div>
-
-    <script src="./index.js" type="text/javascript"></script>
   </body>
 </html>

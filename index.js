@@ -35,9 +35,9 @@ const uploadHandler = (input) => {
     const signatureImg = document.getElementById('signatureImg');
 
     reader.onload = (e) => {
+      signatureImg.style.visibility = 'visible';
       signatureImg.src = e.target.result;
       signatureImg.width = 400;
-      signatureImg.height = 200;
     };
 
     reader.readAsDataURL(input.files[0]);

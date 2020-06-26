@@ -1,52 +1,63 @@
-@primaryColor: #bbdefb;
-@secondaryColor: #b2dfdb;
+@primaryColor: #b2dfdb;
 @handwrittenFont: 'Indie Flower';
-@smallFontSize: 14px;
-@mediumFontSize: 18px;
+@smallFontSize: 16px;
 @largeFontSize: 24px;
 
 body {
   font-family: Arial;
   font-size: @smallFontSize;
+  height: 100vh;
 }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  background-color: @primaryColor;
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  min-height: 400px;
 
-  /* Style the buttons inside the tab */
-  button {
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px;
-    transition: 0.3s;
-    font-size: @smallFontSize;
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
 
-    /* Change background color of buttons on hover */
-    &:hover {
-      background-color: @secondaryColor;
-    }
+    /* Style the buttons inside the tab */
+    button {
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 15px;
+      transition: 0.3s;
+      font-size: @smallFontSize;
 
-    /* Active/current tab link class */
-    &.active {
-      background-color: @secondaryColor;
+      /* Change background color of buttons on hover */
+      &:hover {
+        background-color: @primaryColor;
+      }
+
+      /* Active/current tab link class */
+      &.active {
+        background-color: @primaryColor;
+      }
     }
   }
-}
 
-/* Style the tab content */
-.tabContent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+  /* Style the tab content */
+  .tabContent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+  }
 
-/* Style type field */
-#signatureTyped {
-  font-family: @handwrittenFont, cursive;
-  font-size: @largeFontSize;
+  /* Style type field */
+  #signatureTyped {
+    font-family: @handwrittenFont, cursive;
+    font-size: @largeFontSize;
+  }
+
+  #signatureImg {
+    visibility: hidden;
+  }
+
+  #drawPad {
+    border-style: ridge;
+  }
 }
